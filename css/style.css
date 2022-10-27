@@ -463,6 +463,64 @@ img {
   font-size: var(--fs-sm);
 }
 
+/*** TEAM ***/
+.team-item {
+  grid-column: span 4;
+}
+
+.team-item .img-box {
+  max-width: 350px;
+  box-shadow: var(--shadow);
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.team-item img {
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.team-item:hover img {
+  filter: grayscale(50%);
+}
+
+.team-item .detail {
+  background-color: var(--main-color);
+  width: 85%;
+  max-width: 260px;
+  padding: 15px;
+  margin: -42px auto 0;
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 1;
+  border-radius: 0 40px;
+  transition: all 0.8s ease-in-out;
+}
+
+.team-item:hover .detail {
+  border-radius: 40px 0;
+}
+
+.team-item h3 {
+  margin: 0 0 5px;
+  color: var(--text-white);
+  font-size: var(--fs-xl);
+  font-weight: 500;
+}
+
+.team-item p {
+  margin: 0;
+  color: var(--text-light-gray);
+}
+
+
+
+
+
+
+
 
 
 
