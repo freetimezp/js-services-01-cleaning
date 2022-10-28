@@ -655,10 +655,184 @@ textarea.input-control {
   border-color: initial;
 }
 
+/*** RESPONSIVE ***/
+@media screen and (max-width: 1199px) {
+  .about-img .box-1 {
+    top: 100%;
+    left: 50%;
+  }
+}
 
+@media screen and (max-width: 991px) {
+  :root {
+    --fs-4xl: 42px;
+    --fs-3xl: 31px;
+    --fs-2xl: 24px;
+  }
+  .home-img img {
+    max-width: 250px; 
+  }
+  .home-img .circle {
+    height: 290px;
+    width: 290px;
+  }
+  .services-item .img-box {
+    height: 120px;
+    width: 120px;
+  }
+  .pricing-item {
+    grid-column: span 6;
+  }
+  .pricing-header .price {
+    height: 130px;
+    width: 130px;
+  }
+  .team-item {
+    grid-column: span 6;
+  }
+}
 
+@media screen and (max-width: 767px) {
+  :root {
+    --fs-4xl: 35px;
+    --fs-3xl: 26px;
+    --fs-2xl: 22px;
+    --fs-xl: 18px;
+  }
+  .nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 260px;
+    background-color: var(--bg-color);
+    padding: 60px 30px 30px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .nav.open {
+    transform: translateX(0);
+    box-shadow: var(--shadow);
+  }
+  .nav li {
+    display: block;
+    margin: 0;
+  }
+  .nav a {
+    font-size: var(--fs-lg);
+  }
+  .nav li + li {
+    border-top: 1px solid var(--border-color);
+  }
+  .nav-toggle {
+    display: block;
+    height: 34px;
+    width: 40px;
+    border: none;
+    z-index: 1;
+    background-color: transparent;
+  }
+  .nav-toggle span {
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: var(--main-color);
+    margin: auto;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+  }
+  .nav-toggle.active span {
+    background-color: transparent;
+  }
 
+  .nav-toggle span::after,
+  .nav-toggle span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all 0.4s ease-in-out;
+  }
+  .nav-toggle span::before {
+    transform: translateY(-7px);
+  }
+  .nav-toggle.active span::before {
+    transform: rotate(45deg);
+  }
+  .nav-toggle span::after {
+    transform: translateY(7px);
+  }
+  .nav-toggle.active span::after {
+    transform: rotate(-45deg);
+  }
 
+  .home-text,
+  .home-img {
+    grid-column: span 12;
+  }
+  .home-img {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .about-text,
+  .about-img {
+    grid-column: span 12;
+  }
+  .about-text {
+    order: -1;
+  }
+  .about-text .section-title {
+    text-align: center;
+  }
+  .about-img .box {
+    height: 115px;
+    width: 115px;
+  }
+
+  .services-item {
+    grid-column: span 6;
+  }
+
+  .pricing-header .price {
+    height: 120px;
+    width: 120px;
+  }
+
+  .contact-form,
+  .contact-info {
+    grid-column: span 12;
+  }
+  .contact-info {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .grid {
+    gap: 30px 15px;
+  }
+
+  .home-img img {
+    max-width: 200px;
+  }
+  .home-img .circle {
+    height: 250px;
+    width: 250px;
+  }
+
+  .pricing-item {
+    grid-column: span 12;
+  }
+
+  .team-item {
+    grid-column: span 12;
+  }
+}
 
 
 
