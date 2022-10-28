@@ -834,6 +834,47 @@ textarea.input-control {
   }
 }
 
+/* PRELOADER */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.preloader div {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border-left: 4px solid var(--main-color);
+  border-right: 4px solid var(--main-color);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  animation: preloader 1s linear infinite;
+}
+
+@keyframes preloader {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 
 
 
