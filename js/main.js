@@ -34,3 +34,8 @@ const navigation = () => {
   });
 };
 navigation();
+
+//animation
+window.addEventListener("load", () => {
+  AOS.init();
+});
